@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form action="" method="POST">
+            <fieldset>
+                <legend>Dinos qué producto te interesa:</legend>
+                <label for="nombre">Pon tu nombre</label>
+                <input name="nombre" type="text" id="nombre"><br>
+                <label for="email">Email</label><br>
+                <input name="email" type="email" id="email">
+                <ol>
+                    <li>
+                        <input type="checkbox" id="check">Fanta de naranja de 1 litro
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check">Fanta de naranja de medio litro
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check">Fanta de limón de 1 litro
+                    </li>
+                    <li>
+                        <input type="checkbox" id="check">Fanta de limón de medio litro
+                    </li>
+                </ol>
+                <input type="submit" value="Iniciar sesion" onclick="vacio(nombre.value,email.value,check.value)">
+                <input type="reset">
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        function vacio(nombre, email, check) {
+            if (nombre == "" || email == "") {
+                alert("El campo email y nombre son obligatorios");
+            } else if (nombre != "" && email != "") {
+                document.write("Datos obtenidos correctamente");
+
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Primera opcion es si lo dejas vacio que diga que no lo dejes vacio, nos obligue a poner un checkbox -->
